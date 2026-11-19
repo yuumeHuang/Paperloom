@@ -1,0 +1,6 @@
+*.pdf -text
+*.folio -text
+*.apk -text
+*.png -text
+*.jpg -text
+*.zip -text

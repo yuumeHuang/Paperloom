@@ -1,0 +1,9 @@
+{
+  "appId": "app.paperloom.reader",
+  "appName": "Paperloom · 研读",
+  "webDir": "www",
+  "loggingBehavior": "none",
+  "server": {"androidScheme": "https", "hostname": "localhost"},
+  "android": {"backgroundColor": "#f8f7f3", "allowMixedContent": false},
+  "plugins": {"CapacitorHttp": {"enabled": false}, "SystemBars": {"insetsHandling": "css", "initialViewportFitValueHint": "cover", "style": "LIGHT"}}
+}

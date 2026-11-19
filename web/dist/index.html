@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#172d32"><meta name="description" content="Paperloom 研读，把科研文献整理成自然流畅的双语阅读。">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; worker-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data:; connect-src 'self' https:; object-src 'none'; base-uri 'self'">
+  <title>Paperloom · 研读</title>
+  <link rel="icon" href="./icon.svg" type="image/svg+xml"><link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="./styles.css"><script type="module" src="./app.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#library" aria-label="研读书库"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M7 5h11a7 7 0 0 1 7 7v15H14a7 7 0 0 1-7-7z"/><path d="M12 11h8M12 16h8M12 21h4"/></svg><span>Paperloom<small>研读 · 让知识自然展开</small></span></a>
+      <div class="sidebar-label">WORKSPACE</div>
+      <nav class="main-nav" aria-label="主导航">
+        <button data-view="library" class="active"><span class="nav-icon">▦</span>我的书库<span id="libraryCount" class="count">1</span></button>
+        <button data-view="prepare"><span class="nav-icon">↥</span>文献准备<span class="dot" id="jobDot" hidden></span></button>
+        <button id="settingsButton"><span class="nav-icon">⚙</span>模型设置</button>
+        <button id="syncSettingsButton"><span class="nav-icon">⇅</span>WebDAV 同步</button>
+      </nav>
+      <div class="sidebar-reader" id="readerNavigation" hidden><div class="sidebar-label">CONTENTS <span>目录</span></div><nav id="toc" class="toc" aria-label="论文章节"></nav><div class="sidebar-label">SAVED PASSAGES <span>书签</span></div><div id="bookmarks"></div></div>
+      <div class="sidebar-sync"><button id="syncNowButton" class="button subtle small">同步书库 ⇅</button><small id="syncSummary" role="status">WebDAV 尚未配置</small><button id="syncRestoreQuick" class="button subtle small" hidden>恢复并同步云端书库</button></div>
+      <div class="sidebar-bottom"><span class="connection-dot" id="connectionDot"></span><div id="connectionStatus">离线阅读器<small>文献保存在此设备</small></div><span class="version">v0.3.4</span></div>
+    </aside>
+    <main class="main-shell">
+      <header class="topbar"><div class="breadcrumbs"><button id="menuButton" class="icon-button mobile-only" aria-label="打开导航">☰</button><span>研读工作空间</span><span class="divider">/</span><strong id="pageName">我的书库</strong></div><div class="top-actions"><span class="local-note"><span class="tiny-dot"></span> 本机书库</span><button id="importButton" class="button subtle small">导入文献包 <span>↗</span></button><div class="avatar" aria-label="本机用户">研</div></div></header>
+      <section id="libraryView" class="view library-view">
+        <div class="eyebrow">YOUR RESEARCH, REWOVEN</div>
+        <div class="page-heading"><div><h1>把阅读，交还给思考。</h1><p>从复杂的 PDF 版面，到清晰、连续的双语文献。</p><a data-android-download class="android-download" href="./downloads/Paperloom-0.3.4.apk" download>下载安卓 App ↗</a></div><button data-view="prepare" class="button primary">＋ 准备一篇论文</button></div>
+        <div class="library-stats"><div><strong id="paperCount">01</strong><span>篇文献</span></div><div><strong id="bookmarkCount">00</strong><span>个阅读书签</span></div><div class="library-caption"><span class="mini-logo">⌘</span>段落双语 · 图表随读 · 离线书库</div></div>
+        <div class="section-toolbar"><div class="tabs"><button class="selected" id="allFilter">全部文献</button><button id="starFilter">有书签的文献</button></div><label class="search-box"><span>⌕</span><input id="librarySearch" type="search" placeholder="搜索标题、作者、关键词" aria-label="搜索书库"></label></div>
+        <div id="paperGrid" class="paper-grid"></div>
+        <div class="workflow-note"><span>01 <b>准备</b> 上传 PDF，整理结构与译文</span><span class="workflow-arrow">→</span><span>02 <b>携带</b> 导出一份 .folio 文献包</span><span class="workflow-arrow">→</span><span>03 <b>研读</b> 在电脑或手机上自由阅读</span></div>
+      </section>
+      <section id="readerView" class="view reader-view" hidden>
+        <div class="reader-toolbar"><button data-view="library" class="back-button">← 书库</button><div class="mode-switch" role="group" aria-label="阅读语言"><button data-mode="translated" class="selected">译文</button><button data-mode="original">原文</button><button data-mode="bilingual">双语</button></div><div class="reader-actions"><button id="findButton" class="icon-button" aria-label="查找文中内容">⌕</button><button id="typeButton" class="icon-button" aria-label="阅读样式">Aa</button><button id="exportButton" class="button subtle small">导出 ↗</button><button id="figuresButton" class="button subtle small">图表</button></div></div>
+        <div id="findPanel" class="find-panel" hidden><input type="search" id="readerSearch" placeholder="查找原文或译文…" aria-label="查找文中内容"><span id="findCount"></span><button id="findNext" class="button subtle small">下一处 ↓</button><button id="findClose" class="icon-button" aria-label="关闭查找">×</button></div>
+        <div id="typePanel" class="type-panel" hidden><label>字号 <input type="range" id="fontSize" min="16" max="24" value="18"></label><button id="themeButton" class="button subtle small">切换夜间阅读</button></div>
+        <div class="reading-layout"><article id="paperArticle" class="paper-article"></article><aside class="figures-rail"><div class="rail-header"><span>FIGURES & TABLES</span><small>图表速览</small></div><div id="assetRail"></div><div class="reading-tip"><span>↔</span><strong>跟随你的阅读节奏</strong><p>点击段落旁的“原 / 译”切换语言，点击文中的图表引用即可展开。</p></div></aside></div>
+        <footer class="reading-footer"><span id="readingProgress">0% 已读</span><div class="progress-track"><div id="readingProgressBar"></div></div><button id="topButton">回到文首 ↑</button></footer>
+      </section>
+      <section id="prepareView" class="view prepare-view" hidden>
+        <div class="eyebrow">THE PREPARATION STUDIO</div><div class="page-heading"><div><h1>一篇论文，一条清晰的线索。</h1><p>提取版面证据，让模型重建结构，再把原文与译文织在一起。</p></div><button id="prepareSettings" class="button subtle">配置模型 ↗</button></div>
+        <div id="serverNotice" class="notice" hidden>当前是独立阅读器。请在 PC 上启动准备端，在其网页上传 PDF；导出的 .folio 可直接在这里导入阅读。</div>
+        <div class="preparation-grid"><div class="upload-card"><div class="card-topline"><span>01 / IMPORT</span><span class="pill">PDF → FOLIO</span></div><label class="dropzone" id="dropzone"><input type="file" id="pdfInput" accept="application/pdf,.pdf"><span class="upload-icon">↥</span><strong>将论文放在这里</strong><p id="selectedPdf">拖入 PDF，或点击选择文件</p><small>支持文本型 PDF · 单篇最大 80 MB</small></label><div class="upload-options"><label class="checkbox"><input type="checkbox" id="useLLM" checked> 使用 LLM 重建结构并翻译</label><p>关闭后可先检查几何解析结果；不会生成译文。</p></div><button id="prepareButton" class="button primary full">开始准备 <span>→</span></button></div><div class="process-explainer"><div class="card-topline"><span>02 / RECONSTRUCT</span><span class="live-label">可追溯的处理过程</span></div><ol><li><span>1</span><div><strong>提取版面证据</strong><p>文字、字体、坐标、矢量图与表格</p></div></li><li><span>2</span><div><strong>重建自然阅读顺序</strong><p>多栏顺序、章节层级、跨页段落与图注</p></div></li><li><span>3</span><div><strong>逐段翻译与核对</strong><p>稳定段落 ID、术语表与数值检查</p></div></li><li><span>4</span><div><strong>自动校验，打包，带走</strong><p>独立模型检查结构与译文，自动修复并保存来源</p></div></li></ol></div></div>
+        <div class="section-toolbar"><h2>准备记录</h2><span class="muted">任务与缓存保存在 PC 本机</span></div><div id="jobList" class="job-list"></div>
+      </section>
+    </main>
+  </div>
+  <input type="file" id="packageInput" accept=".folio,.zip,.bin,application/zip" hidden>
+  <dialog id="syncDialog" class="settings-dialog"><form id="syncForm">
+    <div class="dialog-header"><div><div class="eyebrow">YOUR LIBRARY, EVERYWHERE</div><h2>让文献跟着你走。</h2></div><button type="button" data-close class="icon-button" aria-label="关闭同步设置">×</button></div>
+    <p class="muted">将文献包、书签与阅读进度同步到自己的 WebDAV。其他设备使用相同地址和目录即可读取。</p>
+    <div class="form-grid">
+      <label class="full-span">WebDAV 地址<input name="url" type="url" required autocomplete="url" placeholder="https://dav.example.com/dav/" maxlength="2000"></label>
+      <label class="full-span">同步目录<input name="folder" inputmode="url" autocapitalize="none" autocorrect="off" spellcheck="false" required value="Paperloom" maxlength="160"><small class="muted">在 WebDAV 地址下创建的相对目录，多端请保持一致。</small></label>
+      <label>账号<input name="username" inputmode="url" autocapitalize="none" autocorrect="off" spellcheck="false" autocomplete="username" maxlength="500"></label>
+      <label>密码 / 应用专用密码<input name="password" type="password" autocapitalize="none" autocorrect="off" spellcheck="false" autocomplete="off" maxlength="2000"></label>
+      <label class="checkbox full-span"><input name="auto" type="checkbox"> 前台自动同步（阅读时每分钟及内容变更后）</label>
+      <label id="syncRememberLabel" class="checkbox full-span" hidden><input name="remember" type="checkbox"> 使用 Android 安全存储保存登录信息</label>
+      <label class="checkbox full-span"><input name="allowHttp" type="checkbox"> 允许 HTTP（文献与登录信息会明文传输）</label>
+    </div>
+    <p id="syncTransportNote" class="muted"></p><p class="muted">教学示例默认不上传。从本机移除文献会保留云端副本；书签的添加与取消会同步。</p>
+    <div class="sync-actions"><button id="syncTestButton" type="button" class="button subtle small">测试连接</button><button id="syncRestoreButton" type="button" class="button subtle small">恢复并同步云端书库</button><button id="syncDisconnectButton" type="button" class="button subtle small">断开连接</button><button class="button primary small" type="submit">保存配置</button></div>
+    <div class="sync-activity"><span id="syncActivity" role="status">配置后即可同步。</span><div><button id="syncDialogNow" type="button" class="button primary small">立即同步 ⇅</button><button id="syncCancelButton" type="button" class="button subtle small" hidden>取消同步</button></div></div>
+    <details id="syncHiddenNotice" class="sync-hidden" hidden><summary id="syncHiddenCount"></summary><p>这些文献的云端副本仍在。点击“恢复并同步云端书库”即可下载到本机。</p><ul id="syncHiddenList"></ul></details>
+  </form></dialog>
+  <dialog id="settingsDialog" class="settings-dialog"><form id="settingsForm">
+    <div class="dialog-header"><div><div class="eyebrow">MODEL CONNECTION</div><h2>把你的模型接进来。</h2></div><button type="button" data-close class="icon-button" aria-label="关闭设置">×</button></div>
+    <p class="muted">兼容 Chat Completions。布局与翻译可分别使用不同模型。</p>
+    <div class="form-grid">
+      <label class="full-span">Base URL<input name="base_url" type="url" required placeholder="https://api.example.com/v1"></label>
+      <label class="full-span">API Key <span class="muted">仅保留在当前会话，不写入配置</span><input name="api_key" type="password" autocomplete="off" placeholder="本地无鉴权模型可留空"></label>
+      <div class="model-detection full-span"><div class="model-detection-actions"><button id="detectModels" type="button" class="button subtle small">自动检测模型 ↻</button><button id="testModels" type="button" class="button subtle small">测试所选模型</button></div><p id="modelStatus" role="status" class="muted">修改连接信息后自动获取模型列表；也可手动填写模型。检测由 PC 准备端执行。</p><div id="modelList" class="model-list" hidden></div></div>
+      <datalist id="modelChoices"></datalist>
+      <label>布局模型<input name="layout_model" list="modelChoices" placeholder="选择检测结果，或手动填写" required></label>
+      <label>翻译模型<input name="translation_model" list="modelChoices" placeholder="选择检测结果，或手动填写" required></label>
+      <label>目标语言<input name="target_language" value="简体中文" required></label>
+      <label>输出 token 上限<input name="max_output_tokens" type="number" min="1024" max="32768" value="8192"></label>
+      <label class="checkbox full-span"><input type="checkbox" name="vision"> 视觉版面分析与扫描页 OCR（需要图像模型）</label>
+      <label class="checkbox"><input type="checkbox" name="json_mode" checked> JSON 模式</label>
+      <label>Token 参数<select name="token_parameter"><option value="max_tokens">max_tokens</option><option value="max_completion_tokens">max_completion_tokens</option></select></label>
+      <label class="full-span">思考模式 <span class="muted">MiMo 等兼容 thinking 参数的服务</span><select name="thinking_mode"><option value="auto">使用服务默认值</option><option value="disabled">关闭思考，直接输出</option><option value="enabled">启用思考</option></select></label>
+      <label>每层请求重试次数<input name="retry_attempts" type="number" min="1" max="5" value="3"></label>
+      <div class="full-span fallback-settings"><div class="provider-heading"><strong>备用服务与模型链</strong><button type="button" id="addFallbackButton" class="button subtle small">＋ 添加服务</button></div><p class="muted">按显示顺序回退。每个服务内的模型也按顺序尝试。独立校验 agent 自动选择链上的下一种模型；布局与翻译模型不同时也可互为备用与校验模型。密钥仅保留在本次会话。</p><div id="providerList"></div></div>
+      <label class="full-span">术语表 <span class="muted">每行一个：英文 = 译法</span><textarea name="glossary" rows="3" placeholder="reading order = 阅读顺序"></textarea></label>
+      <label class="full-span">准备端访问令牌 <span class="muted">仅局域网模式需要，仅本会话保留</span><input name="access_token" type="password" autocomplete="off"></label>
+    </div><div class="dialog-footer"><span id="settingsResult" class="muted">模型调用由 PC 准备端执行</span><button class="button primary" type="submit">保存设置</button></div>
+  </form></dialog>
+  <dialog id="assetDialog" class="asset-dialog"><div class="dialog-header"><div><span class="eyebrow" id="assetKind"></span><h2 id="assetTitle"></h2></div><div class="asset-dialog-actions"><button id="assetZoom" class="button subtle small">放大 ＋</button><button data-close class="icon-button" aria-label="关闭图表">×</button></div></div><div id="assetCanvas" class="asset-canvas"></div><div id="assetCaption" class="asset-caption"></div><div id="assetData" class="asset-data"></div></dialog>
+  <dialog id="sourceDialog" class="source-dialog"><div class="dialog-header"><h2 id="sourceTitle">来源页</h2><button data-close class="icon-button" aria-label="关闭来源页">×</button></div><div id="sourceCanvas" class="source-canvas"></div></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+</body></html>

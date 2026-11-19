@@ -1,0 +1,583 @@
+{
+  "$defs": {
+    "Asset": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "figure",
+            "table",
+            "equation"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "label": {
+          "default": "",
+          "title": "Label",
+          "type": "string"
+        },
+        "path": {
+          "title": "Path",
+          "type": "string"
+        },
+        "page": {
+          "title": "Page",
+          "type": "integer"
+        },
+        "bbox": {
+          "items": {
+            "type": "number"
+          },
+          "title": "Bbox",
+          "type": "array"
+        },
+        "caption": {
+          "default": "",
+          "title": "Caption",
+          "type": "string"
+        },
+        "caption_translated": {
+          "default": "",
+          "title": "Caption Translated",
+          "type": "string"
+        },
+        "table": {
+          "anyOf": [
+            {
+              "items": {
+                "items": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "type": "array"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Table"
+        },
+        "confidence": {
+          "default": 0.6,
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Confidence",
+          "type": "number"
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "path",
+        "page",
+        "bbox"
+      ],
+      "title": "Asset",
+      "type": "object"
+    },
+    "Block": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "title",
+            "author",
+            "abstract",
+            "heading",
+            "paragraph",
+            "caption",
+            "figure_text",
+            "equation",
+            "table",
+            "reference",
+            "footnote",
+            "metadata"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "original": {
+          "title": "Original",
+          "type": "string"
+        },
+        "translated": {
+          "default": "",
+          "title": "Translated",
+          "type": "string"
+        },
+        "translation_status": {
+          "default": "pending",
+          "enum": [
+            "pending",
+            "translated",
+            "review",
+            "unavailable",
+            "not_required"
+          ],
+          "title": "Translation Status",
+          "type": "string"
+        },
+        "source": {
+          "items": {
+            "$ref": "#/$defs/Source"
+          },
+          "title": "Source",
+          "type": "array"
+        },
+        "styles": {
+          "items": {
+            "$ref": "#/$defs/TextStyle"
+          },
+          "title": "Styles",
+          "type": "array"
+        },
+        "heading_level": {
+          "default": 1,
+          "maximum": 6,
+          "minimum": 1,
+          "title": "Heading Level",
+          "type": "integer"
+        },
+        "translated_styles": {
+          "items": {
+            "$ref": "#/$defs/TextStyle"
+          },
+          "title": "Translated Styles",
+          "type": "array"
+        },
+        "confidence": {
+          "default": 0.6,
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Confidence",
+          "type": "number"
+        },
+        "label": {
+          "default": "",
+          "title": "Label",
+          "type": "string"
+        },
+        "asset_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Asset Id"
+        },
+        "references": {
+          "additionalProperties": {
+            "items": {
+              "$ref": "#/$defs/Reference"
+            },
+            "type": "array"
+          },
+          "title": "References",
+          "type": "object"
+        },
+        "section": {
+          "default": "body",
+          "maxLength": 80,
+          "title": "Section",
+          "type": "string"
+        },
+        "translation_error": {
+          "default": "",
+          "maxLength": 500,
+          "title": "Translation Error",
+          "type": "string"
+        },
+        "translated_by": {
+          "default": "",
+          "maxLength": 180,
+          "title": "Translated By",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "original",
+        "source"
+      ],
+      "title": "Block",
+      "type": "object"
+    },
+    "Issue": {
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "title": "Code",
+          "type": "string"
+        },
+        "message": {
+          "title": "Message",
+          "type": "string"
+        },
+        "severity": {
+          "default": "warning",
+          "enum": [
+            "info",
+            "warning",
+            "error"
+          ],
+          "title": "Severity",
+          "type": "string"
+        },
+        "block_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Block Id"
+        }
+      },
+      "required": [
+        "code",
+        "message"
+      ],
+      "title": "Issue",
+      "type": "object"
+    },
+    "Metadata": {
+      "additionalProperties": false,
+      "properties": {
+        "title": {
+          "default": "Untitled paper",
+          "title": "Title",
+          "type": "string"
+        },
+        "title_translated": {
+          "default": "",
+          "title": "Title Translated",
+          "type": "string"
+        },
+        "authors": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Authors",
+          "type": "array"
+        },
+        "journal": {
+          "default": "",
+          "title": "Journal",
+          "type": "string"
+        },
+        "year": {
+          "default": "",
+          "title": "Year",
+          "type": "string"
+        },
+        "doi": {
+          "default": "",
+          "title": "Doi",
+          "type": "string"
+        },
+        "language": {
+          "default": "en",
+          "title": "Language",
+          "type": "string"
+        },
+        "target_language": {
+          "default": "简体中文",
+          "title": "Target Language",
+          "type": "string"
+        },
+        "filename": {
+          "default": "",
+          "title": "Filename",
+          "type": "string"
+        },
+        "demo": {
+          "default": false,
+          "title": "Demo",
+          "type": "boolean"
+        }
+      },
+      "title": "Metadata",
+      "type": "object"
+    },
+    "Page": {
+      "additionalProperties": false,
+      "properties": {
+        "number": {
+          "title": "Number",
+          "type": "integer"
+        },
+        "width": {
+          "title": "Width",
+          "type": "number"
+        },
+        "height": {
+          "title": "Height",
+          "type": "number"
+        },
+        "preview": {
+          "title": "Preview",
+          "type": "string"
+        }
+      },
+      "required": [
+        "number",
+        "width",
+        "height",
+        "preview"
+      ],
+      "title": "Page",
+      "type": "object"
+    },
+    "Reference": {
+      "additionalProperties": false,
+      "properties": {
+        "start": {
+          "title": "Start",
+          "type": "integer"
+        },
+        "end": {
+          "title": "End",
+          "type": "integer"
+        },
+        "asset_id": {
+          "title": "Asset Id",
+          "type": "string"
+        },
+        "label": {
+          "title": "Label",
+          "type": "string"
+        }
+      },
+      "required": [
+        "start",
+        "end",
+        "asset_id",
+        "label"
+      ],
+      "title": "Reference",
+      "type": "object"
+    },
+    "Source": {
+      "additionalProperties": false,
+      "properties": {
+        "page": {
+          "minimum": 1,
+          "title": "Page",
+          "type": "integer"
+        },
+        "bbox": {
+          "items": {
+            "type": "number"
+          },
+          "maxItems": 4,
+          "minItems": 4,
+          "title": "Bbox",
+          "type": "array"
+        },
+        "block_id": {
+          "title": "Block Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "page",
+        "bbox",
+        "block_id"
+      ],
+      "title": "Source",
+      "type": "object"
+    },
+    "TextStyle": {
+      "additionalProperties": false,
+      "properties": {
+        "text": {
+          "title": "Text",
+          "type": "string"
+        },
+        "font": {
+          "default": "",
+          "title": "Font",
+          "type": "string"
+        },
+        "size": {
+          "default": 0,
+          "title": "Size",
+          "type": "number"
+        },
+        "bold": {
+          "default": false,
+          "title": "Bold",
+          "type": "boolean"
+        },
+        "italic": {
+          "default": false,
+          "title": "Italic",
+          "type": "boolean"
+        },
+        "superscript": {
+          "default": false,
+          "title": "Superscript",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "text"
+      ],
+      "title": "TextStyle",
+      "type": "object"
+    },
+    "TocEntry": {
+      "additionalProperties": false,
+      "properties": {
+        "block_id": {
+          "title": "Block Id",
+          "type": "string"
+        },
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "translated": {
+          "default": "",
+          "title": "Translated",
+          "type": "string"
+        },
+        "level": {
+          "default": 1,
+          "title": "Level",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "block_id",
+        "title"
+      ],
+      "title": "TocEntry",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "format": {
+      "const": "paperloom",
+      "default": "paperloom",
+      "title": "Format",
+      "type": "string"
+    },
+    "version": {
+      "const": "1.0",
+      "default": "1.0",
+      "title": "Version",
+      "type": "string"
+    },
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "metadata": {
+      "$ref": "#/$defs/Metadata"
+    },
+    "blocks": {
+      "items": {
+        "$ref": "#/$defs/Block"
+      },
+      "title": "Blocks",
+      "type": "array"
+    },
+    "assets": {
+      "items": {
+        "$ref": "#/$defs/Asset"
+      },
+      "title": "Assets",
+      "type": "array"
+    },
+    "pages": {
+      "items": {
+        "$ref": "#/$defs/Page"
+      },
+      "title": "Pages",
+      "type": "array"
+    },
+    "toc": {
+      "items": {
+        "$ref": "#/$defs/TocEntry"
+      },
+      "title": "Toc",
+      "type": "array"
+    },
+    "issues": {
+      "items": {
+        "$ref": "#/$defs/Issue"
+      },
+      "title": "Issues",
+      "type": "array"
+    },
+    "excluded": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "title": "Excluded",
+      "type": "object"
+    },
+    "provenance": {
+      "additionalProperties": true,
+      "title": "Provenance",
+      "type": "object"
+    },
+    "reviewed": {
+      "default": false,
+      "title": "Reviewed",
+      "type": "boolean"
+    },
+    "reading_sections": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Reading Sections",
+      "type": "array"
+    },
+    "block_aliases": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "title": "Block Aliases",
+      "type": "object"
+    }
+  },
+  "required": [
+    "id",
+    "metadata",
+    "blocks",
+    "assets",
+    "pages"
+  ],
+  "title": "Document",
+  "type": "object"
+}

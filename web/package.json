@@ -1,0 +1,8 @@
+{
+  "name": "paperloom-reader",
+  "version": "0.3.4",
+  "private": true,
+  "type": "module",
+  "scripts": {"vendor": "node ../scripts/vendor.mjs", "test": "node --test ../tests/reader.test.mjs"},
+  "dependencies": {"fflate": "0.8.2"}
+}

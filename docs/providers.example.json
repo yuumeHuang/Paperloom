@@ -1,0 +1,16 @@
+{
+  "base_url": "https://your-provider.example/v1",
+  "layout_model": "MAIN_MODEL",
+  "translation_model": "MAIN_MODEL",
+  "retry_attempts": 3,
+  "max_output_tokens": 16384,
+  "fallbacks": [
+    {
+      "name": "独立校验与备用模型",
+      "base_url": "https://your-provider.example/v1",
+      "models": ["SECOND_MODEL", "THIRD_MODEL"],
+      "inherit_primary_key": true,
+      "max_output_tokens": 16384
+    }
+  ]
+}

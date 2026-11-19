@@ -1,0 +1,1947 @@
+{
+  "format": "paperloom",
+  "version": "1.0",
+  "id": "paperloom-demo-v1",
+  "metadata": {
+    "title": "From PDF pages to a living research paper",
+    "title_translated": "让论文从 PDF 页面走向自然阅读",
+    "authors": [
+      "Paperloom 文献阅读示例"
+    ],
+    "journal": "PAPERLOOM 示例",
+    "year": "2026",
+    "doi": "",
+    "language": "en",
+    "target_language": "简体中文",
+    "filename": "paperloom-example.pdf",
+    "demo": true
+  },
+  "blocks": [
+    {
+      "id": "b00001",
+      "kind": "title",
+      "original": "From PDF pages to a living research paper",
+      "translated": "让论文从 PDF 页面走向自然阅读",
+      "translation_status": "translated",
+      "source": [
+        {
+          "page": 1,
+          "bbox": [
+            48.0,
+            46.569000244140625,
+            277.5000305175781,
+            113.58699798583984
+          ],
+          "block_id": "p0001-b0003"
+        }
+      ],
+      "styles": [
+        {
+          "text": "From PDF pages to a",
+          "font": "Times-Roman",
+          "size": 27.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        },
+        {
+          "text": "living research paper",
+          "font": "Times-Roman",
+          "size": 27.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        }
+      ],
+      "heading_level": 1,
+      "confidence": 1.0,
+      "label": "",
+      "asset_id": null,
+      "references": {
+        "original": [],
+        "translated": []
+      },
+      "section": "body",
+      "translation_error": ""
+    },
+    {
+      "id": "b00003",
+      "kind": "heading",
+      "original": "Abstract",
+      "translated": "摘要",
+      "translation_status": "translated",
+      "source": [
+        {
+          "page": 1,
+          "bbox": [
+            48.0,
+            168.42799377441406,
+            96.37300872802734,
+            186.43299865722656
+          ],
+          "block_id": "p0001-b0005"
+        }
+      ],
+      "styles": [
+        {
+          "text": "Abstract",
+          "font": "Times-Bold",
+          "size": 13.0,
+          "bold": true,
+          "italic": false,
+          "superscript": false
+        }
+      ],
+      "heading_level": 1,
+      "confidence": 1.0,
+      "label": "",
+      "asset_id": null,
+      "references": {
+        "original": [],
+        "translated": []
+      },
+      "section": "body",
+      "translation_error": ""
+    },
+    {
+      "id": "b00004",
+      "kind": "paragraph",
+      "original": "A PDF preserves the appearance of a page, but its visual layout does not always express the order in which a paper should be read. This self-authored example demonstrates a continuous bilingual reading experience with traceable paragraphs, figures, and tables.",
+      "translated": "PDF 保留了页面的外观，但视觉版面并不总能表达论文应有的阅读顺序。本教学示例展示了一种连续的双语阅读体验，段落、图片与表格都能追溯到原页。",
+      "translation_status": "translated",
+      "source": [
+        {
+          "page": 1,
+          "bbox": [
+            48.0,
+            195.47000122070312,
+            562.0401000976562,
+            236.80999755859375
+          ],
+          "block_id": "p0001-b0006"
+        }
+      ],
+      "styles": [
+        {
+          "text": "A PDF preserves the appearance of a page, but its visual layout does not always express the order in which a paper should be",
+          "font": "Times-Roman",
+          "size": 10.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        },
+        {
+          "text": "read. This self-authored example demonstrates a continuous bilingual reading experience with traceable paragraphs, figures, and",
+          "font": "Times-Roman",
+          "size": 10.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        },
+        {
+          "text": "tables.",
+          "font": "Times-Roman",
+          "size": 10.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        }
+      ],
+      "heading_level": 1,
+      "confidence": 1.0,
+      "label": "",
+      "asset_id": null,
+      "references": {
+        "original": [],
+        "translated": []
+      },
+      "section": "body",
+      "translation_error": ""
+    },
+    {
+      "id": "b00005",
+      "kind": "heading",
+      "original": "1 Introduction",
+      "translated": "1 引言",
+      "translation_status": "translated",
+      "source": [
+        {
+          "page": 1,
+          "bbox": [
+            48.0,
+            264.3840026855469,
+            134.7300262451172,
+            283.77398681640625
+          ],
+          "block_id": "p0001-b0007"
+        }
+      ],
+      "styles": [
+        {
+          "text": "1 Introduction",
+          "font": "Times-Bold",
+          "size": 14.0,
+          "bold": true,
+          "italic": false,
+          "superscript": false
+        }
+      ],
+      "heading_level": 1,
+      "confidence": 1.0,
+      "label": "",
+      "asset_id": null,
+      "references": {
+        "original": [],
+        "translated": []
+      },
+      "section": "body",
+      "translation_error": ""
+    },
+    {
+      "id": "b00006",
+      "kind": "paragraph",
+      "original": "Scientific reading moves between ideas and evidence. A reader may follow an argument, examine Fig. 1, and then return to the same paragraph. Repeatedly searching through a fixed page layout interrupts this process.",
+      "translated": "科研阅读需要在观点与证据之间往返。读者可能先理解论证，再查看 Fig. 1，然后回到同一段落。在固定页面中反复寻找位置，会打断这一过程。",
+      "translation_status": "translated",
+      "source": [
+        {
+          "page": 1,
+          "bbox": [
+            48.0,
+            296.4700012207031,
+            286.83001708984375,
+            351.80999755859375
+          ],
+          "block_id": "p0001-b0008"
+        }
+      ],
+      "styles": [
+        {
+          "text": "Scientific reading moves between ideas and evidence. A",
+          "font": "Times-Roman",
+          "size": 10.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        },
+        {
+          "text": "reader may follow an argument, examine Fig. 1, and then",
+          "font": "Times-Roman",
+          "size": 10.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        },
+        {
+          "text": "return to the same paragraph. Repeatedly searching through",
+          "font": "Times-Roman",
+          "size": 10.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        },
+        {
+          "text": "a fixed page layout interrupts this process.",
+          "font": "Times-Roman",
+          "size": 10.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        }
+      ],
+      "heading_level": 1,
+      "confidence": 1.0,
+      "label": "",
+      "asset_id": null,
+      "references": {
+        "original": [
+          {
+            "start": 94,
+            "end": 100,
+            "asset_id": "demo-fig1",
+            "label": "Fig. 1"
+          }
+        ],
+        "translated": [
+          {
+            "start": 31,
+            "end": 37,
+            "asset_id": "demo-fig1",
+            "label": "Fig. 1"
+          }
+        ]
+      },
+      "section": "body",
+      "translation_error": ""
+    },
+    {
+      "id": "b00007",
+      "kind": "paragraph",
+      "original": "A structured paper keeps the original text, its translation, and its source coordinates together. The translation can be changed independently, while the original evidence remains available for inspection.",
+      "translated": "结构化文献将原文、译文和来源坐标保存在一起。译文可以独立调整，原始证据则始终可以查阅。",
+      "translation_status": "translated",
+      "source": [
+        {
+          "page": 1,
+          "bbox": [
+            48.0,
+            365.4700012207031,
+            288.2300109863281,
+            420.80999755859375
+          ],
+          "block_id": "p0001-b0009"
+        }
+      ],
+      "styles": [
+        {
+          "text": "A structured paper keeps the original text, its translation,",
+          "font": "Times-Roman",
+          "size": 10.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        },
+        {
+          "text": "and its source coordinates together. The translation can be",
+          "font": "Times-Roman",
+          "size": 10.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        },
+        {
+          "text": "changed independently, while the original evidence remains",
+          "font": "Times-Roman",
+          "size": 10.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        },
+        {
+          "text": "available for inspection.",
+          "font": "Times-Roman",
+          "size": 10.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        }
+      ],
+      "heading_level": 1,
+      "confidence": 1.0,
+      "label": "",
+      "asset_id": null,
+      "references": {
+        "original": [],
+        "translated": []
+      },
+      "section": "body",
+      "translation_error": ""
+    },
+    {
+      "id": "b00008",
+      "kind": "figure_text",
+      "original": "EVIDENCE",
+      "translated": "",
+      "translation_status": "not_required",
+      "source": [
+        {
+          "page": 1,
+          "bbox": [
+            67.0,
+            515.2999877929688,
+            118.1199951171875,
+            529.0700073242188
+          ],
+          "block_id": "p0001-b0012"
+        }
+      ],
+      "styles": [
+        {
+          "text": "EVIDENCE",
+          "font": "Helvetica-Bold",
+          "size": 10.0,
+          "bold": true,
+          "italic": false,
+          "superscript": false
+        }
+      ],
+      "heading_level": 1,
+      "confidence": 1.0,
+      "label": "",
+      "asset_id": "demo-fig1",
+      "references": {
+        "original": [],
+        "translated": []
+      },
+      "section": "body",
+      "translation_error": ""
+    },
+    {
+      "id": "b00009",
+      "kind": "figure_text",
+      "original": "STRUCTURE",
+      "translated": "",
+      "translation_status": "not_required",
+      "source": [
+        {
+          "page": 1,
+          "bbox": [
+            251.0,
+            515.2999877929688,
+            312.6600036621094,
+            529.0700073242188
+          ],
+          "block_id": "p0001-b0014"
+        }
+      ],
+      "styles": [
+        {
+          "text": "STRUCTURE",
+          "font": "Helvetica-Bold",
+          "size": 10.0,
+          "bold": true,
+          "italic": false,
+          "superscript": false
+        }
+      ],
+      "heading_level": 1,
+      "confidence": 1.0,
+      "label": "",
+      "asset_id": "demo-fig1",
+      "references": {
+        "original": [],
+        "translated": []
+      },
+      "section": "body",
+      "translation_error": ""
+    },
+    {
+      "id": "b00010",
+      "kind": "paragraph",
+      "original": "The reading order is determined from both geometry and semantic structure. Full-width material interrupts column flow; captions, equations, and reference entries need their own roles rather than being mixed into body paragraphs.",
+      "translated": "阅读顺序需要结合几何位置和语义结构判断。通栏内容会中断分栏顺序；图注、公式和参考文献条目各有独立的作用，应当与正文段落分别组织。",
+      "translation_status": "translated",
+      "source": [
+        {
+          "page": 1,
+          "bbox": [
+            323.0,
+            296.4700012207031,
+            553.7700805664062,
+            351.80999755859375
+          ],
+          "block_id": "p0001-b0010"
+        }
+      ],
+      "styles": [
+        {
+          "text": "The reading order is determined from both geometry and",
+          "font": "Times-Roman",
+          "size": 10.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        },
+        {
+          "text": "semantic structure. Full-width material interrupts column",
+          "font": "Times-Roman",
+          "size": 10.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        },
+        {
+          "text": "flow; captions, equations, and reference entries need their",
+          "font": "Times-Roman",
+          "size": 10.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        },
+        {
+          "text": "own roles rather than being mixed into body paragraphs.",
+          "font": "Times-Roman",
+          "size": 10.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        }
+      ],
+      "heading_level": 1,
+      "confidence": 1.0,
+      "label": "",
+      "asset_id": null,
+      "references": {
+        "original": [],
+        "translated": []
+      },
+      "section": "body",
+      "translation_error": ""
+    },
+    {
+      "id": "b00011",
+      "kind": "paragraph",
+      "original": "This example contains illustrative values only. Its purpose is to demonstrate interaction, not to report an experiment. All translations are supplied with the example so that the reader can be explored without an API key.",
+      "translated": "本示例只包含示意数值，用于展示交互，不用于报告实验结果。译文已随示例提供，因此无需 API Key 即可体验阅读器。",
+      "translation_status": "translated",
+      "source": [
+        {
+          "page": 1,
+          "bbox": [
+            323.0,
+            365.4700012207031,
+            555.7601318359375,
+            420.80999755859375
+          ],
+          "block_id": "p0001-b0011"
+        }
+      ],
+      "styles": [
+        {
+          "text": "This example contains illustrative values only. Its purpose",
+          "font": "Times-Roman",
+          "size": 10.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        },
+        {
+          "text": "is to demonstrate interaction, not to report an experiment.",
+          "font": "Times-Roman",
+          "size": 10.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        },
+        {
+          "text": "All translations are supplied with the example so that the",
+          "font": "Times-Roman",
+          "size": 10.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        },
+        {
+          "text": "reader can be explored without an API key.",
+          "font": "Times-Roman",
+          "size": 10.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        }
+      ],
+      "heading_level": 1,
+      "confidence": 1.0,
+      "label": "",
+      "asset_id": null,
+      "references": {
+        "original": [],
+        "translated": []
+      },
+      "section": "body",
+      "translation_error": ""
+    },
+    {
+      "id": "b00012",
+      "kind": "figure_text",
+      "original": "READING",
+      "translated": "",
+      "translation_status": "not_required",
+      "source": [
+        {
+          "page": 1,
+          "bbox": [
+            435.0,
+            515.2999877929688,
+            481.1100158691406,
+            529.0700073242188
+          ],
+          "block_id": "p0001-b0016"
+        }
+      ],
+      "styles": [
+        {
+          "text": "READING",
+          "font": "Helvetica-Bold",
+          "size": 10.0,
+          "bold": true,
+          "italic": false,
+          "superscript": false
+        }
+      ],
+      "heading_level": 1,
+      "confidence": 1.0,
+      "label": "",
+      "asset_id": "demo-fig1",
+      "references": {
+        "original": [],
+        "translated": []
+      },
+      "section": "body",
+      "translation_error": ""
+    },
+    {
+      "id": "b00013",
+      "kind": "figure_text",
+      "original": "Order + translation",
+      "translated": "",
+      "translation_status": "not_required",
+      "source": [
+        {
+          "page": 1,
+          "bbox": [
+            251.0,
+            542.3250122070312,
+            325.78106689453125,
+            554.6909790039062
+          ],
+          "block_id": "p0001-b0015"
+        }
+      ],
+      "styles": [
+        {
+          "text": "Order + translation",
+          "font": "Helvetica",
+          "size": 9.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        }
+      ],
+      "heading_level": 1,
+      "confidence": 1.0,
+      "label": "",
+      "asset_id": "demo-fig1",
+      "references": {
+        "original": [],
+        "translated": []
+      },
+      "section": "body",
+      "translation_error": ""
+    },
+    {
+      "id": "b00014",
+      "kind": "figure_text",
+      "original": "Text + geometry",
+      "translated": "",
+      "translation_status": "not_required",
+      "source": [
+        {
+          "page": 1,
+          "bbox": [
+            67.0,
+            542.3250122070312,
+            132.27699279785156,
+            554.6909790039062
+          ],
+          "block_id": "p0001-b0013"
+        }
+      ],
+      "styles": [
+        {
+          "text": "Text + geometry",
+          "font": "Helvetica",
+          "size": 9.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        }
+      ],
+      "heading_level": 1,
+      "confidence": 1.0,
+      "label": "",
+      "asset_id": "demo-fig1",
+      "references": {
+        "original": [],
+        "translated": []
+      },
+      "section": "body",
+      "translation_error": ""
+    },
+    {
+      "id": "b00015",
+      "kind": "figure_text",
+      "original": "Paragraphs + figures",
+      "translated": "",
+      "translation_status": "not_required",
+      "source": [
+        {
+          "page": 1,
+          "bbox": [
+            435.0,
+            542.3250122070312,
+            518.7900390625,
+            554.6909790039062
+          ],
+          "block_id": "p0001-b0017"
+        }
+      ],
+      "styles": [
+        {
+          "text": "Paragraphs + figures",
+          "font": "Helvetica",
+          "size": 9.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        }
+      ],
+      "heading_level": 1,
+      "confidence": 1.0,
+      "label": "",
+      "asset_id": "demo-fig1",
+      "references": {
+        "original": [],
+        "translated": []
+      },
+      "section": "body",
+      "translation_error": ""
+    },
+    {
+      "id": "b00016",
+      "kind": "caption",
+      "original": "Fig. 1. The preparation and reading workflow. Geometry provides evidence, a layout model proposes structure, and a reader presents linked bilingual paragraphs. The diagram is illustrative.",
+      "translated": "Fig. 1. 文献准备与阅读流程。几何信息提供依据，布局模型提出结构，阅读器呈现带有链接的双语段落。本图为示意图。",
+      "translation_status": "translated",
+      "source": [
+        {
+          "page": 1,
+          "bbox": [
+            48.0,
+            641.5230102539062,
+            551.38818359375,
+            665.5289916992188
+          ],
+          "block_id": "p0001-b0018"
+        }
+      ],
+      "styles": [
+        {
+          "text": "Fig. 1. The preparation and reading workflow. Geometry provides evidence, a layout model proposes structure, and a reader presents linked",
+          "font": "Times-Roman",
+          "size": 9.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        },
+        {
+          "text": "bilingual paragraphs. The diagram is illustrative.",
+          "font": "Times-Roman",
+          "size": 9.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        }
+      ],
+      "heading_level": 1,
+      "confidence": 1.0,
+      "label": "Fig. 1",
+      "asset_id": "demo-fig1",
+      "references": {
+        "original": [
+          {
+            "start": 0,
+            "end": 6,
+            "asset_id": "demo-fig1",
+            "label": "Fig. 1"
+          }
+        ],
+        "translated": [
+          {
+            "start": 0,
+            "end": 6,
+            "asset_id": "demo-fig1",
+            "label": "Fig. 1"
+          }
+        ]
+      },
+      "section": "body",
+      "translation_error": ""
+    },
+    {
+      "id": "b00017",
+      "kind": "heading",
+      "original": "2 Methods",
+      "translated": "2 方法",
+      "translation_status": "translated",
+      "source": [
+        {
+          "page": 2,
+          "bbox": [
+            48.0,
+            53.38399887084961,
+            110.60801696777344,
+            72.77400207519531
+          ],
+          "block_id": "p0002-b0003"
+        }
+      ],
+      "styles": [
+        {
+          "text": "2 Methods",
+          "font": "Times-Bold",
+          "size": 14.0,
+          "bold": true,
+          "italic": false,
+          "superscript": false
+        }
+      ],
+      "heading_level": 1,
+      "confidence": 1.0,
+      "label": "",
+      "asset_id": null,
+      "references": {
+        "original": [],
+        "translated": []
+      },
+      "section": "methods",
+      "translation_error": ""
+    },
+    {
+      "id": "b00018",
+      "kind": "paragraph",
+      "original": "Each extracted text block is assigned a stable source identifier. The layout planner returns groups of identifiers in reading order, and the verifier checks that every source block is either used once or explicitly recorded as marginal text.",
+      "translated": "每个提取的文字块都分配了稳定的来源标识。布局规划器按阅读顺序返回这些标识的分组，校验器检查每个来源块是否被恰好使用一次，或被明确记录为页边文字。",
+      "translation_status": "translated",
+      "source": [
+        {
+          "page": 2,
+          "bbox": [
+            48.0,
+            87.47000122070312,
+            289.3500061035156,
+            156.80999755859375
+          ],
+          "block_id": "p0002-b0004"
+        }
+      ],
+      "styles": [
+        {
+          "text": "Each extracted text block is assigned a stable source",
+          "font": "Times-Roman",
+          "size": 10.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        },
+        {
+          "text": "identifier. The layout planner returns groups of identifiers in",
+          "font": "Times-Roman",
+          "size": 10.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        },
+        {
+          "text": "reading order, and the verifier checks that every source",
+          "font": "Times-Roman",
+          "size": 10.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        },
+        {
+          "text": "block is either used once or explicitly recorded as marginal",
+          "font": "Times-Roman",
+          "size": 10.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        },
+        {
+          "text": "text.",
+          "font": "Times-Roman",
+          "size": 10.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        }
+      ],
+      "heading_level": 1,
+      "confidence": 1.0,
+      "label": "",
+      "asset_id": null,
+      "references": {
+        "original": [],
+        "translated": []
+      },
+      "section": "methods",
+      "translation_error": ""
+    },
+    {
+      "id": "b00019",
+      "kind": "paragraph",
+      "original": "Translation is performed after the structure is reconstructed. Paragraph identifiers remain stable. A configurable glossary helps keep terminology consistent, and numeric checks flag values that differ between the original and translated text.",
+      "translated": "翻译在结构重建之后进行，段落标识保持稳定。可配置的术语表帮助统一译法，数字检查则标记原文与译文之间不一致的数值。",
+      "translation_status": "translated",
+      "source": [
+        {
+          "page": 2,
+          "bbox": [
+            48.0,
+            170.47000122070312,
+            288.780029296875,
+            225.80999755859375
+          ],
+          "block_id": "p0002-b0005"
+        }
+      ],
+      "styles": [
+        {
+          "text": "Translation is performed after the structure is reconstructed.",
+          "font": "Times-Roman",
+          "size": 10.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        },
+        {
+          "text": "Paragraph identifiers remain stable. A configurable glossary",
+          "font": "Times-Roman",
+          "size": 10.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        },
+        {
+          "text": "helps keep terminology consistent, and numeric checks flag",
+          "font": "Times-Roman",
+          "size": 10.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        },
+        {
+          "text": "values that differ between the original and translated text.",
+          "font": "Times-Roman",
+          "size": 10.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        }
+      ],
+      "heading_level": 1,
+      "confidence": 1.0,
+      "label": "",
+      "asset_id": null,
+      "references": {
+        "original": [],
+        "translated": []
+      },
+      "section": "methods",
+      "translation_error": ""
+    },
+    {
+      "id": "b00020",
+      "kind": "heading",
+      "original": "3 Results",
+      "translated": "3 结果",
+      "translation_status": "translated",
+      "source": [
+        {
+          "page": 2,
+          "bbox": [
+            323.0,
+            53.38399887084961,
+            377.05401611328125,
+            72.77400207519531
+          ],
+          "block_id": "p0002-b0006"
+        }
+      ],
+      "styles": [
+        {
+          "text": "3 Results",
+          "font": "Times-Bold",
+          "size": 14.0,
+          "bold": true,
+          "italic": false,
+          "superscript": false
+        }
+      ],
+      "heading_level": 1,
+      "confidence": 1.0,
+      "label": "",
+      "asset_id": null,
+      "references": {
+        "original": [],
+        "translated": []
+      },
+      "section": "body",
+      "translation_error": ""
+    },
+    {
+      "id": "b00021",
+      "kind": "paragraph",
+      "original": "The illustrative resource inventory is shown in Table 1. Images preserve the original appearance of vector plots and tables. Structured table cells are retained when available, but the source image remains the evidence to inspect.",
+      "translated": "Table 1 展示了示意性的资源清单。图像保留了矢量图与表格的原始外观。能够提取时也会保存结构化单元格，但仍应以来源图像为核对依据。",
+      "translation_status": "translated",
+      "source": [
+        {
+          "page": 2,
+          "bbox": [
+            323.0,
+            87.47000122070312,
+            561.2600708007812,
+            142.80999755859375
+          ],
+          "block_id": "p0002-b0007"
+        }
+      ],
+      "styles": [
+        {
+          "text": "The illustrative resource inventory is shown in Table 1.",
+          "font": "Times-Roman",
+          "size": 10.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        },
+        {
+          "text": "Images preserve the original appearance of vector plots and",
+          "font": "Times-Roman",
+          "size": 10.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        },
+        {
+          "text": "tables. Structured table cells are retained when available,",
+          "font": "Times-Roman",
+          "size": 10.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        },
+        {
+          "text": "but the source image remains the evidence to inspect.",
+          "font": "Times-Roman",
+          "size": 10.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        }
+      ],
+      "heading_level": 1,
+      "confidence": 1.0,
+      "label": "",
+      "asset_id": null,
+      "references": {
+        "original": [
+          {
+            "start": 48,
+            "end": 55,
+            "asset_id": "demo-table1",
+            "label": "Table 1"
+          }
+        ],
+        "translated": [
+          {
+            "start": 0,
+            "end": 7,
+            "asset_id": "demo-table1",
+            "label": "Table 1"
+          }
+        ]
+      },
+      "section": "body",
+      "translation_error": ""
+    },
+    {
+      "id": "b00022",
+      "kind": "paragraph",
+      "original": "A portable package contains the document structure, bilingual text, a table of contents, figures, source-page previews, and the original PDF. File hashes allow the reader to check that the package is complete before importing it.",
+      "translated": "便携文献包包含文档结构、双语文字、章节目录、图片、来源页预览及原始 PDF。文件哈希让阅读器能够在导入之前检查文献包是否完整。",
+      "translation_status": "translated",
+      "source": [
+        {
+          "page": 2,
+          "bbox": [
+            323.0,
+            156.47000122070312,
+            540.1799926757812,
+            225.80999755859375
+          ],
+          "block_id": "p0002-b0008"
+        }
+      ],
+      "styles": [
+        {
+          "text": "A portable package contains the document structure,",
+          "font": "Times-Roman",
+          "size": 10.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        },
+        {
+          "text": "bilingual text, a table of contents, figures, source-page",
+          "font": "Times-Roman",
+          "size": 10.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        },
+        {
+          "text": "previews, and the original PDF. File hashes allow the",
+          "font": "Times-Roman",
+          "size": 10.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        },
+        {
+          "text": "reader to check that the package is complete before",
+          "font": "Times-Roman",
+          "size": 10.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        },
+        {
+          "text": "importing it.",
+          "font": "Times-Roman",
+          "size": 10.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        }
+      ],
+      "heading_level": 1,
+      "confidence": 1.0,
+      "label": "",
+      "asset_id": null,
+      "references": {
+        "original": [],
+        "translated": []
+      },
+      "section": "body",
+      "translation_error": ""
+    },
+    {
+      "id": "b00023",
+      "kind": "caption",
+      "original": "Table 1. An illustrative inventory of resources in a portable paper package. Values describe this example only.",
+      "translated": "Table 1. 便携文献包的示意资源清单。数值仅描述本示例。",
+      "translation_status": "translated",
+      "source": [
+        {
+          "page": 2,
+          "bbox": [
+            48.0,
+            282.52301025390625,
+            445.6651611328125,
+            294.52899169921875
+          ],
+          "block_id": "p0002-b0009"
+        }
+      ],
+      "styles": [
+        {
+          "text": "Table 1. An illustrative inventory of resources in a portable paper package. Values describe this example only.",
+          "font": "Times-Roman",
+          "size": 9.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        }
+      ],
+      "heading_level": 1,
+      "confidence": 1.0,
+      "label": "Table 1",
+      "asset_id": "demo-table1",
+      "references": {
+        "original": [
+          {
+            "start": 0,
+            "end": 7,
+            "asset_id": "demo-table1",
+            "label": "Table 1"
+          }
+        ],
+        "translated": [
+          {
+            "start": 0,
+            "end": 7,
+            "asset_id": "demo-table1",
+            "label": "Table 1"
+          }
+        ]
+      },
+      "section": "body",
+      "translation_error": ""
+    },
+    {
+      "id": "b00024",
+      "kind": "table",
+      "original": "Resource Count Purpose",
+      "translated": "",
+      "translation_status": "not_required",
+      "source": [
+        {
+          "page": 2,
+          "bbox": [
+            58.0,
+            328.3699951171875,
+            338.00897216796875,
+            340.76300048828125
+          ],
+          "block_id": "p0002-b0010"
+        }
+      ],
+      "styles": [
+        {
+          "text": "Resource",
+          "font": "Helvetica-Bold",
+          "size": 9.0,
+          "bold": true,
+          "italic": false,
+          "superscript": false
+        },
+        {
+          "text": "Count",
+          "font": "Helvetica-Bold",
+          "size": 9.0,
+          "bold": true,
+          "italic": false,
+          "superscript": false
+        },
+        {
+          "text": "Purpose",
+          "font": "Helvetica-Bold",
+          "size": 9.0,
+          "bold": true,
+          "italic": false,
+          "superscript": false
+        }
+      ],
+      "heading_level": 1,
+      "confidence": 1.0,
+      "label": "",
+      "asset_id": "demo-table1",
+      "references": {
+        "original": [],
+        "translated": []
+      },
+      "section": "body",
+      "translation_error": ""
+    },
+    {
+      "id": "b00025",
+      "kind": "table",
+      "original": "Source PDF 1 Audit original evidence",
+      "translated": "",
+      "translation_status": "not_required",
+      "source": [
+        {
+          "page": 2,
+          "bbox": [
+            58.0,
+            351.32501220703125,
+            392.5399475097656,
+            363.6910095214844
+          ],
+          "block_id": "p0002-b0011"
+        }
+      ],
+      "styles": [
+        {
+          "text": "Source PDF",
+          "font": "Helvetica",
+          "size": 9.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        },
+        {
+          "text": "1",
+          "font": "Helvetica",
+          "size": 9.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        },
+        {
+          "text": "Audit original evidence",
+          "font": "Helvetica",
+          "size": 9.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        }
+      ],
+      "heading_level": 1,
+      "confidence": 1.0,
+      "label": "",
+      "asset_id": "demo-table1",
+      "references": {
+        "original": [],
+        "translated": []
+      },
+      "section": "body",
+      "translation_error": ""
+    },
+    {
+      "id": "b00026",
+      "kind": "table",
+      "original": "Source pages 2 Locate text and figures",
+      "translated": "",
+      "translation_status": "not_required",
+      "source": [
+        {
+          "page": 2,
+          "bbox": [
+            58.0,
+            374.32501220703125,
+            393.0530700683594,
+            386.6910095214844
+          ],
+          "block_id": "p0002-b0012"
+        }
+      ],
+      "styles": [
+        {
+          "text": "Source pages",
+          "font": "Helvetica",
+          "size": 9.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        },
+        {
+          "text": "2",
+          "font": "Helvetica",
+          "size": 9.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        },
+        {
+          "text": "Locate text and figures",
+          "font": "Helvetica",
+          "size": 9.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        }
+      ],
+      "heading_level": 1,
+      "confidence": 1.0,
+      "label": "",
+      "asset_id": "demo-table1",
+      "references": {
+        "original": [],
+        "translated": []
+      },
+      "section": "body",
+      "translation_error": ""
+    },
+    {
+      "id": "b00027",
+      "kind": "table",
+      "original": "Figures 1 Open linked diagram",
+      "translated": "",
+      "translation_status": "not_required",
+      "source": [
+        {
+          "page": 2,
+          "bbox": [
+            58.0,
+            397.32501220703125,
+            385.03399658203125,
+            409.6910095214844
+          ],
+          "block_id": "p0002-b0013"
+        }
+      ],
+      "styles": [
+        {
+          "text": "Figures",
+          "font": "Helvetica",
+          "size": 9.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        },
+        {
+          "text": "1",
+          "font": "Helvetica",
+          "size": 9.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        },
+        {
+          "text": "Open linked diagram",
+          "font": "Helvetica",
+          "size": 9.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        }
+      ],
+      "heading_level": 1,
+      "confidence": 1.0,
+      "label": "",
+      "asset_id": "demo-table1",
+      "references": {
+        "original": [
+          {
+            "start": 0,
+            "end": 9,
+            "asset_id": "demo-fig1",
+            "label": "Figures 1"
+          }
+        ],
+        "translated": []
+      },
+      "section": "body",
+      "translation_error": ""
+    },
+    {
+      "id": "b00028",
+      "kind": "table",
+      "original": "Tables 1 Preserve cells and appearance",
+      "translated": "",
+      "translation_status": "not_required",
+      "source": [
+        {
+          "page": 2,
+          "bbox": [
+            58.0,
+            420.32501220703125,
+            426.0559997558594,
+            432.6910095214844
+          ],
+          "block_id": "p0002-b0014"
+        }
+      ],
+      "styles": [
+        {
+          "text": "Tables",
+          "font": "Helvetica",
+          "size": 9.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        },
+        {
+          "text": "1",
+          "font": "Helvetica",
+          "size": 9.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        },
+        {
+          "text": "Preserve cells and appearance",
+          "font": "Helvetica",
+          "size": 9.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        }
+      ],
+      "heading_level": 1,
+      "confidence": 1.0,
+      "label": "",
+      "asset_id": "demo-table1",
+      "references": {
+        "original": [
+          {
+            "start": 0,
+            "end": 8,
+            "asset_id": "demo-table1",
+            "label": "Tables 1"
+          }
+        ],
+        "translated": []
+      },
+      "section": "body",
+      "translation_error": ""
+    },
+    {
+      "id": "b00029",
+      "kind": "heading",
+      "original": "4 Discussion",
+      "translated": "4 讨论",
+      "translation_status": "translated",
+      "source": [
+        {
+          "page": 2,
+          "bbox": [
+            48.0,
+            474.3840026855469,
+            121.51400756835938,
+            493.77398681640625
+          ],
+          "block_id": "p0002-b0015"
+        }
+      ],
+      "styles": [
+        {
+          "text": "4 Discussion",
+          "font": "Times-Bold",
+          "size": 14.0,
+          "bold": true,
+          "italic": false,
+          "superscript": false
+        }
+      ],
+      "heading_level": 1,
+      "confidence": 1.0,
+      "label": "",
+      "asset_id": null,
+      "references": {
+        "original": [],
+        "translated": []
+      },
+      "section": "body",
+      "translation_error": ""
+    },
+    {
+      "id": "b00030",
+      "kind": "paragraph",
+      "original": "Different publishers use different layouts. An independent verification agent checks the first model's structure and translation decisions, and the preparation service repairs failed paragraphs through an ordered fallback chain.",
+      "translated": "不同出版商使用不同版面。独立校验 agent 检查主模型的结构和翻译决策，准备端通过有序回退链自动修复失败段落。",
+      "translation_status": "translated",
+      "source": [
+        {
+          "page": 2,
+          "bbox": [
+            48.0,
+            508.4700012207031,
+            281.010009765625,
+            563.8099975585938
+          ],
+          "block_id": "p0002-b0016"
+        }
+      ],
+      "styles": [
+        {
+          "text": "Different publishers use different layouts. An independent",
+          "font": "Times-Roman",
+          "size": 10.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        },
+        {
+          "text": "verification agent checks the first model's structure and",
+          "font": "Times-Roman",
+          "size": 10.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        },
+        {
+          "text": "translation decisions, and the preparation service repairs",
+          "font": "Times-Roman",
+          "size": 10.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        },
+        {
+          "text": "failed paragraphs through an ordered fallback chain.",
+          "font": "Times-Roman",
+          "size": 10.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        }
+      ],
+      "heading_level": 1,
+      "confidence": 1.0,
+      "label": "",
+      "asset_id": null,
+      "references": {
+        "original": [],
+        "translated": []
+      },
+      "section": "body",
+      "translation_error": ""
+    },
+    {
+      "id": "b00031",
+      "kind": "paragraph",
+      "original": "The separation of preparation and reading makes automated verification practical. A PC has the tools and processing time needed to reconstruct a paper. A phone needs only the resulting package and a calm interface for reading it.",
+      "translated": "将准备过程与阅读过程分开，便于自动校验。PC 拥有重建论文所需的工具和处理时间；手机只需要最终的文献包，以及适合专注阅读的界面。",
+      "translation_status": "translated",
+      "source": [
+        {
+          "page": 2,
+          "bbox": [
+            48.0,
+            577.469970703125,
+            287.6600341796875,
+            632.8099975585938
+          ],
+          "block_id": "p0002-b0017"
+        }
+      ],
+      "styles": [
+        {
+          "text": "The separation of preparation and reading makes automated",
+          "font": "Times-Roman",
+          "size": 10.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        },
+        {
+          "text": "verification practical. A PC has the tools and processing",
+          "font": "Times-Roman",
+          "size": 10.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        },
+        {
+          "text": "time needed to reconstruct a paper. A phone needs only the",
+          "font": "Times-Roman",
+          "size": 10.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        },
+        {
+          "text": "resulting package and a calm interface for reading it.",
+          "font": "Times-Roman",
+          "size": 10.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        }
+      ],
+      "heading_level": 1,
+      "confidence": 1.0,
+      "label": "",
+      "asset_id": null,
+      "references": {
+        "original": [],
+        "translated": []
+      },
+      "section": "body",
+      "translation_error": ""
+    },
+    {
+      "id": "b00032",
+      "kind": "heading",
+      "original": "5 References",
+      "translated": "5 参考说明",
+      "translation_status": "translated",
+      "source": [
+        {
+          "page": 2,
+          "bbox": [
+            323.0,
+            474.3840026855469,
+            398.7960205078125,
+            493.77398681640625
+          ],
+          "block_id": "p0002-b0018"
+        }
+      ],
+      "styles": [
+        {
+          "text": "5 References",
+          "font": "Times-Bold",
+          "size": 14.0,
+          "bold": true,
+          "italic": false,
+          "superscript": false
+        }
+      ],
+      "heading_level": 1,
+      "confidence": 1.0,
+      "label": "",
+      "asset_id": null,
+      "references": {
+        "original": [],
+        "translated": []
+      },
+      "section": "references",
+      "translation_error": ""
+    },
+    {
+      "id": "b00033",
+      "kind": "reference",
+      "original": "This demonstration does not cite or reproduce a published article. Its text, diagram, table, and bilingual passages were created for testing Paperloom.",
+      "translated": "本演示未引用或复现已发表论文。文字、流程图、表格与双语段落均为测试 Paperloom 而编写。",
+      "translation_status": "translated",
+      "source": [
+        {
+          "page": 2,
+          "bbox": [
+            323.0,
+            508.4700012207031,
+            559.6199951171875,
+            549.8099975585938
+          ],
+          "block_id": "p0002-b0019"
+        }
+      ],
+      "styles": [
+        {
+          "text": "This demonstration does not cite or reproduce a published",
+          "font": "Times-Roman",
+          "size": 10.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        },
+        {
+          "text": "article. Its text, diagram, table, and bilingual passages were",
+          "font": "Times-Roman",
+          "size": 10.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        },
+        {
+          "text": "created for testing Paperloom.",
+          "font": "Times-Roman",
+          "size": 10.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        }
+      ],
+      "heading_level": 1,
+      "confidence": 1.0,
+      "label": "",
+      "asset_id": null,
+      "references": {
+        "original": [],
+        "translated": []
+      },
+      "section": "references",
+      "translation_error": ""
+    },
+    {
+      "id": "b00002",
+      "kind": "author",
+      "original": "Paperloom demo | A self-authored software fixture",
+      "translated": "",
+      "translation_status": "not_required",
+      "source": [
+        {
+          "page": 1,
+          "bbox": [
+            48.0,
+            130.25,
+            270.68994140625,
+            143.99000549316406
+          ],
+          "block_id": "p0001-b0004"
+        }
+      ],
+      "styles": [
+        {
+          "text": "Paperloom demo | A self-authored software fixture",
+          "font": "Helvetica",
+          "size": 10.0,
+          "bold": false,
+          "italic": false,
+          "superscript": false
+        }
+      ],
+      "heading_level": 1,
+      "confidence": 1.0,
+      "label": "",
+      "asset_id": null,
+      "references": {
+        "original": [],
+        "translated": []
+      },
+      "section": "publication_information",
+      "translation_error": ""
+    }
+  ],
+  "assets": [
+    {
+      "id": "demo-fig1",
+      "kind": "figure",
+      "label": "Fig. 1",
+      "path": "assets/demo-fig1.png",
+      "page": 1,
+      "bbox": [
+        46.0,
+        488.0,
+        565.0,
+        621.0
+      ],
+      "caption": "Fig. 1. The preparation and reading workflow. Geometry provides evidence, a layout model proposes structure, and a reader presents linked bilingual paragraphs. The diagram is illustrative.",
+      "caption_translated": "Fig. 1. 文献准备与阅读流程。几何信息提供依据，布局模型提出结构，阅读器呈现带有链接的双语段落。本图为示意图。",
+      "table": null,
+      "confidence": 1.0
+    },
+    {
+      "id": "demo-table1",
+      "kind": "table",
+      "label": "Table 1",
+      "path": "assets/demo-table1.png",
+      "page": 2,
+      "bbox": [
+        47.0,
+        322.0,
+        565.0,
+        439.0
+      ],
+      "caption": "Table 1. An illustrative inventory of resources in a portable paper package. Values describe this example only.",
+      "caption_translated": "Table 1. 便携文献包的示意资源清单。数值仅描述本示例。",
+      "table": [
+        [
+          "Resource",
+          "Count",
+          "Purpose"
+        ],
+        [
+          "Source PDF",
+          "1",
+          "Audit original evidence"
+        ],
+        [
+          "Source pages",
+          "2",
+          "Locate text and figures"
+        ],
+        [
+          "Figures",
+          "1",
+          "Open linked diagram"
+        ],
+        [
+          "Tables",
+          "1",
+          "Preserve cells and appearance"
+        ]
+      ],
+      "confidence": 1.0
+    }
+  ],
+  "pages": [
+    {
+      "number": 1,
+      "width": 612.0,
+      "height": 792.0,
+      "preview": "pages/0001.png"
+    },
+    {
+      "number": 2,
+      "width": 612.0,
+      "height": 792.0,
+      "preview": "pages/0002.png"
+    }
+  ],
+  "toc": [
+    {
+      "block_id": "b00003",
+      "title": "Abstract",
+      "translated": "摘要",
+      "level": 1
+    },
+    {
+      "block_id": "b00005",
+      "title": "1 Introduction",
+      "translated": "1 引言",
+      "level": 1
+    },
+    {
+      "block_id": "b00017",
+      "title": "2 Methods",
+      "translated": "2 方法",
+      "level": 1
+    },
+    {
+      "block_id": "b00020",
+      "title": "3 Results",
+      "translated": "3 结果",
+      "level": 1
+    },
+    {
+      "block_id": "b00029",
+      "title": "4 Discussion",
+      "translated": "4 讨论",
+      "level": 1
+    },
+    {
+      "block_id": "b00032",
+      "title": "References",
+      "translated": "参考文献",
+      "level": 1
+    },
+    {
+      "block_id": "b00002",
+      "title": "Publication information",
+      "translated": "出版信息",
+      "level": 1
+    }
+  ],
+  "issues": [
+    {
+      "code": "demo",
+      "message": "自编教学样例，译文预先编写，图表为示意内容",
+      "severity": "info",
+      "block_id": null
+    }
+  ],
+  "excluded": {
+    "p0001-b0001": "header",
+    "p0001-b0002": "page_number",
+    "p0002-b0001": "header",
+    "p0002-b0002": "page_number"
+  },
+  "provenance": {
+    "pipeline": "paperloom-0.3",
+    "pdf_sha256": "d2b5b127c81845927af883c48cc9e60a3d0442214e0b9b6a315a358a26a58a52",
+    "layout_model": "geometry",
+    "translation_model": "self-authored fixture translations",
+    "source_blocks": 37,
+    "accounted_blocks": 37,
+    "translation_settings": {
+      "target_language": "简体中文",
+      "glossary": {}
+    },
+    "ocr_pages": [],
+    "prompt_hashes": {
+      "layout": "3c57fc177c32dbb3191c918f63aaf33a69499820bc5208a10c2b15f3d82e68ca",
+      "ocr": "0fde5a125d6526598cdbff57ebc2ce8c28230789f0764664049f6da0d54096ae",
+      "structure": "7dcd72f911b3cc7aae721485d9a1f01d2c3b1091eec70efc898768b5ad58a62f",
+      "structure_verify": "5f2ef2721ba37498f2b4940c0c5e31972192c3f09e788b1b27b1993332d4d89e",
+      "translate": "acfe050db1734d5351d9abccebd4679a846153a0b3a22e2e29744064258a6420",
+      "translation_verify": "eb3fceb64d8e6e03408201ca26d9ec83fe06fcefbd6f71e6b774dd94d25c1b21"
+    },
+    "translation_verification": {
+      "blocks": 21,
+      "status": "partial",
+      "independent_model": false,
+      "unavailable": 21,
+      "differences": 0
+    }
+  },
+  "reviewed": false,
+  "reading_sections": [
+    {
+      "id": "references",
+      "title": "References",
+      "translated": "参考文献",
+      "collapsed": true,
+      "block_ids": [
+        "b00032",
+        "b00033"
+      ]
+    },
+    {
+      "id": "publication_information",
+      "title": "Publication information",
+      "translated": "出版信息",
+      "collapsed": true,
+      "block_ids": [
+        "b00002"
+      ]
+    }
+  ],
+  "block_aliases": {}
+}

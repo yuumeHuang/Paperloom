@@ -1,0 +1,10 @@
+import { mkdir, copyFile } from 'node:fs/promises';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+await mkdir(path.join(root, 'web/dist/vendor'), { recursive: true });
+await copyFile(path.join(root, 'web/node_modules/fflate/esm/browser.js'), path.join(root, 'web/dist/vendor/fflate.js'));
+await copyFile(path.join(root, 'web/node_modules/fflate/LICENSE'), path.join(root, 'web/dist/vendor/fflate.LICENSE'));
+console.log('fflate vendored for offline package import');
+await copyFile(path.join(root, 'mobile/node_modules/@capacitor/core/dist/index.js'),path.join(root,'web/dist/vendor/capacitor.js'));
+await copyFile(path.join(root, 'mobile/node_modules/@capacitor/core/LICENSE'),path.join(root,'web/dist/vendor/capacitor.LICENSE'));
